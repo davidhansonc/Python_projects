@@ -3,16 +3,6 @@ import hashlib
 import sys
 
 
-# def read_pw_file(filename):
-#     passwords = []
-#     with open(filename, 'r') as my_file:
-#         for line in my_file:
-#             temp = line.split(': ', 1)
-#             if temp[0] == 'password':
-#                 passwords.append(temp[1].strip())
-#     return passwords
-
-
 def read_pw_file(filename):
     password_dict = dict()
     with open(filename, 'r') as my_file:
