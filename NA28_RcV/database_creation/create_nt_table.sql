@@ -6,7 +6,9 @@ CREATE TABLE IF NOT EXISTS new_testament (
     outline varchar(250),
     cross_reference INT [],
     footnote TEXT [],
-    rcv text,
-    na28 text,
+    recovery_version text,
+    nestle_aland28 text,
+    nestle1904 text,
+    amplified text,
     PRIMARY KEY (book, chapter, verse)
 )
