@@ -3,6 +3,7 @@
 
 # VS Code
 .vscode
+email_list.py
 
 # Logs
 logs
