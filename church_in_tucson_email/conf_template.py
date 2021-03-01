@@ -2,7 +2,7 @@ import datetime
 from linked_list import LinkedList
 
 # update weekly
-announcements = """See Jay's email for info on the mountain state conference this weekend. Conference information will be posted on the church in Phoenix website, <a href="https://zoom.us/j/3872308362?pwd=bENhZnJ3WFpGUFo1NXArUk5lL2dBUT09">here</a>"""
+announcements = """See Jay's email for info on the mountain state conference this weekend. Conference information will be posted on the church in Phoenix website <a href="https://zoom.us/j/3872308362?pwd=bENhZnJ3WFpGUFo1NXArUk5lL2dBUT09">here</a>"""
 
 hwmr_week = 1
 HWMR = f"Crystallization-Study of Job, Proverbs, Ecclesiastes, vol. 1, week {hwmr_week}"
@@ -53,15 +53,11 @@ message_html = f"""
         <p>
         <i>{HWMR}</i><br>
         <ul>
-            <li>Day 1:  Group {schedule[0]}
-            <li>Day 2:  Group {schedule[1]}
-            <li>Day 3:  Group {schedule[2]}
-            <li>Day 4:  Group {schedule[3]}
-            <li>Day 5:  Group {schedule[4]}
-            <li>Day 6:  Group {schedule[5]}
+            <li>No prophesying meeting this week due to conference
+            <li>Next week we will repeat week 1 for the prophesying meeting on March 14th also with overflow from this weekend's conference.
         </ul>
 
-        <b>Hall Cleaning (9:15 AM to 9:45 AM):</b><br>
+        <b>Hall Cleaning (9:00 AM to 9:25 AM):</b><br>
         <ul>
             <li>Team  {cleaning_team}
             <br>** see bottom for group and team info
@@ -76,25 +72,16 @@ message_html = f"""
 
         Thursday:  7:30 PM - Review of this Week's Holy Word for Morning Revival <br><br>
 
-        Friday:  7:30 PM  {friday_meeting} <br><br>
+        Friday:  Cancelled due to conference <br><br>
 
-        Saturday:  7:30 PM  {saturday_meeting} <br><br>
+        Saturday:  Cancelled due to conference <br><br>
 
-        Lord’s Day:  10:00 AM to Noon(ish) (Lord's table followed by prophesying – please do not be passive in either meeting) <br><br>
+        Lord’s Day:  9:30 AM to 10:00 AM Table followed by conference meeting<br><br>
 
         Zoom in <a href="https://zoom.us/j/3872308362?pwd=bENhZnJ3WFpGUFo1NXArUk5lL2dBUT09">here</a><br>
         Meeting ID: 387 230 8362 <br>
         Password: Kingdom
         </p><br>
-    <h3>Prophesying Groups</h3>
-        <p>
-        Group 1:  Jay, Randy, Pauline, Kevin <br>
-        Group 2:  David, Chien Wei, Denny, Veronica <br>
-        Group 3:  Craig, Esther H., Josiah, Tewai, Esther <br>
-        Group 4:  Isaac, Millie, Tien Min, Ava, Teresa <br>
-        Group 5:  Joel Jaime G., Samuel, Carol <br>
-        Group 6:  Sam, Jessica, Phoebe, Joe, Osvin, Jamie T.
-        </p>
     <h3>Cleaning Teams</h3>
         <p>
         Team 1:  Jay, Denny, David, Jessica, Pauline, Phoebe <br>
@@ -110,51 +97,37 @@ message_text = f"""
 Announcements:
 {announcements}
 
-
 Next Lord's Day ({lords_day})
 Prophesying Schedule:
 {HWMR}
-Day 1:  Group {schedule[0]}
-Day 2:  Group {schedule[1]}
-Day 3:  Group {schedule[2]}
-Day 4:  Group {schedule[3]}
-Day 5:  Group {schedule[4]}
-Day 6:  Group {schedule[5]}
 
-Hall Cleaning (9:30 AM to 9:55 AM):
-Team  {cleaning_team}
-** see end of email for group and team info
+No prophesying meeting this week due to conference.
+Next week we will repeat week 1 for the prophesying meeting on March 14th also with overflow from this weekend's conference.
 
+    Hall Cleaning (9:00 AM to 9:25 AM):
+    Team  {cleaning_team}
+    ** see bottom for group and team info
 
 Meeting Schedule
-Lord’s Day:  10:00 AM to Noon(ish) - Lord's table followed by prophesying (please do not be passive in either meeting)
-
 Monday:  7:00 PM - Video In the Hall
 
 Tuesday:  7:30 PM - Prayer
 
 Thursday:  7:30 PM - Review of this Week's Holy Word for Morning Revival
 
-Friday:  7:30 PM  {friday_meeting}
+Friday:  Cancelled due to conference
 
-Saturday:  7:30 PM  {saturday_meeting}
+Saturday:  Cancelled due to conference
+
+Lord’s Day:  9:30 AM to 10:00 AM Table followed by conference meeting
 
 Zoom link: https://zoom.us/j/3872308362?pwd=bENhZnJ3WFpGUFo1NXArUk5lL2dBUT09
 Meeting ID: 387 230 8362
 Password: Kingdom
 
-
-Prophesying Groups:
-Group 1:  Jay, Randy, Pauline, Kevin
-Group 2:  David, Chien Wei, Denny, Veronica
-Group 3:  Craig, Esther H., Josiah, Tewai, Esther
-Group 4:  Isaac, Millie, Tien Min, Ava, Teresa
-Group 5:  Joel Jaime G., Samuel, Carol
-Group 6:  Sam, Jessica, Phoebe, Joe, Osvin, Jamie T.
-
-Cleaning Teams:
-Team 1:  Jay, Denny, Kevin, Veronica, Pauline, Phoebe
-Team 2:  Isaac, Esther H., Osvin, Tewei, Millie, Esther
-Team 3:  Craig, Jaime T., Ava, Chien Wei, Josiah, Samuel
-Team 4:  Sam, Joe, Tien Min, Joel, Randy, Carol, Jaime, Teresa
+Cleaning Teams
+    Team 1:  Jay, Denny, David, Jessica, Pauline, Phoebe
+    Team 2:  Isaac, Esther H., Osvin, Tewei, Millie, Esther
+    Team 3:  Craig, Jaime T., Ava, Chien Wei, Josiah, Samuel
+    Team 4:  Sam, Joe, Tien Min, Joel, Randy, Carol, Jaime, Teresa
 """
