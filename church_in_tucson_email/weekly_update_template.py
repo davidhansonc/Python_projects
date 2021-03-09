@@ -1,11 +1,12 @@
 import datetime
 from linked_list import LinkedList
 
+'''UPDATE THE FOLLOWING'''
 # update weekly
-announcements = """See Jay's email for info on the mountain state conference this weekend. Conference information will be posted on the church in Phoenix website, <a href="https://zoom.us/j/3872308362?pwd=bENhZnJ3WFpGUFo1NXArUk5lL2dBUT09">here</a>"""
+announcements = """No announcements this week"""
 
 hwmr_week = 1
-HWMR = f"Crystallization-Study of Job, Proverbs, Ecclesiastes, vol. 1, week {hwmr_week}"
+HWMR = f"""We will speak on the Crystallization-Study of Job, Proverbs, Ecclesiastes, vol. 1, week {hwmr_week} + Last week's conference"""
 
 def get_schedule(seed):
     # create linked list
@@ -23,15 +24,19 @@ def get_schedule(seed):
         node = node.next
     return schedule
 
-group_seed = 6  # update weekly
+group_seed = 5  # update weekly
 schedule = get_schedule(group_seed)
 
-cleaning_team = 4  # update weekly
+cleaning_team = 1  # update weekly
+cleaning_teams = {
+        "Team 1":  "Jay, Denny, David, Jessica, Pauline, Phoebe",
+        "Team 2":  "Isaac, Esther H., Osvin, Tewei, Millie, Esther",
+        "Team 3":  "Craig, Jaime T., Ava, Chien Wei, Josiah, Samuel",
+        "Team 4":  "Sam, Joe, Tien Min, Joel, Randy, Carol, Jaime, Teresa"
+    }
 
-fri_msg = 15  # update weekly
-sat_msg = 55  # update weekly
-friday_meeting = f"Life-study of Galatians, msg. {fri_msg}"
-saturday_meeting = f"Life-study of Matthew, msg. {sat_msg}"
+friday_meeting = f"Life-study of Galatians"  # , msg. {fri_msg}"
+saturday_meeting = f"Life-study of Matthew"  # , msg. {sat_msg}"
 
 lords_day = datetime.date.today()
 if lords_day.weekday() == 6:
@@ -43,11 +48,6 @@ message_html = f"""
 <html>
   <head></head>
   <body>
-    <h2>Announcements</h2>
-        <ul>
-            <li>{announcements}
-        </ul><br>
-    
     <h2>Next Lord's Day ({lords_day})</h2>
         <h3>Prophesying Schedule:</h3>
         <p>
@@ -59,12 +59,12 @@ message_html = f"""
             <li>Day 4:  Group {schedule[3]}
             <li>Day 5:  Group {schedule[4]}
             <li>Day 6:  Group {schedule[5]}
+            <br>** see bottom for groups
         </ul>
 
         <b>Hall Cleaning (9:15 AM to 9:45 AM):</b><br>
         <ul>
-            <li>Team  {cleaning_team}
-            <br>** see bottom for group and team info
+            <li>Team {cleaning_team} - {cleaning_teams[f"Team {cleaning_team}"]}
         </ul>
         </p><br>
 
@@ -95,22 +95,11 @@ message_html = f"""
         Group 5:  Joel Jaime G., Samuel, Carol <br>
         Group 6:  Sam, Jessica, Phoebe, Joe, Osvin, Jamie T.
         </p>
-    <h3>Cleaning Teams</h3>
-        <p>
-        Team 1:  Jay, Denny, David, Jessica, Pauline, Phoebe <br>
-        Team 2:  Isaac, Esther H., Osvin, Tewei, Millie, Esther <br>
-        Team 3:  Craig, Jaime T., Ava, Chien Wei, Josiah, Samuel <br>
-        Team 4:  Sam, Joe, Tien Min, Joel, Randy, Carol, Jaime, Teresa
-        </p>
   </body>
 </html>
 """
 
 message_text = f"""
-Announcements:
-{announcements}
-
-
 Next Lord's Day ({lords_day})
 Prophesying Schedule:
 {HWMR}
@@ -120,10 +109,10 @@ Day 3:  Group {schedule[2]}
 Day 4:  Group {schedule[3]}
 Day 5:  Group {schedule[4]}
 Day 6:  Group {schedule[5]}
+** see end of email for groups
 
 Hall Cleaning (9:30 AM to 9:55 AM):
-Team  {cleaning_team}
-** see end of email for group and team info
+Team {cleaning_team} - {cleaning_teams[f"Team {cleaning_team}"]}
 
 
 Meeting Schedule
@@ -151,10 +140,4 @@ Group 3:  Craig, Esther H., Josiah, Tewai, Esther
 Group 4:  Isaac, Millie, Tien Min, Ava, Teresa
 Group 5:  Joel Jaime G., Samuel, Carol
 Group 6:  Sam, Jessica, Phoebe, Joe, Osvin, Jamie T.
-
-Cleaning Teams:
-Team 1:  Jay, Denny, Kevin, Veronica, Pauline, Phoebe
-Team 2:  Isaac, Esther H., Osvin, Tewei, Millie, Esther
-Team 3:  Craig, Jaime T., Ava, Chien Wei, Josiah, Samuel
-Team 4:  Sam, Joe, Tien Min, Joel, Randy, Carol, Jaime, Teresa
 """

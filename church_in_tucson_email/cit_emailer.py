@@ -5,7 +5,7 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from conf_template import message_html, message_text
+from weekly_update_template import message_html, message_text
 from email_list import email_list
 
 
