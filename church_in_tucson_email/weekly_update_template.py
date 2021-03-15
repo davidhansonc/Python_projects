@@ -5,7 +5,7 @@ from linked_list import LinkedList
 # update weekly
 announcements = """No announcements this week"""
 
-hwmr_week = 1
+hwmr_week = 2  # update weekly (ascending)
 HWMR = f"""We will speak on the Crystallization-Study of Job, Proverbs, Ecclesiastes, vol. 1, week {hwmr_week} + Last week's conference"""
 
 def get_schedule(seed):
@@ -24,10 +24,10 @@ def get_schedule(seed):
         node = node.next
     return schedule
 
-group_seed = 5  # update weekly
+group_seed = 4  # update weekly (descending)
 schedule = get_schedule(group_seed)
 
-cleaning_team = 1  # update weekly
+cleaning_team = 2  # update weekly (ascending)
 cleaning_teams = {
         "Team 1":  "Jay, Denny, David, Jessica, Pauline, Phoebe",
         "Team 2":  "Isaac, Esther H., Osvin, Tewei, Millie, Esther",
@@ -35,8 +35,8 @@ cleaning_teams = {
         "Team 4":  "Sam, Joe, Tien Min, Joel, Randy, Carol, Jaime, Teresa"
     }
 
-friday_meeting = f"Life-study of Galatians"  # , msg. {fri_msg}"
-saturday_meeting = f"Life-study of Matthew"  # , msg. {sat_msg}"
+friday_meeting = f"Life-study of Galatians"
+saturday_meeting = f"Life-study of Matthew"
 
 lords_day = datetime.date.today()
 if lords_day.weekday() == 6:
@@ -68,7 +68,7 @@ message_html = f"""
         </ul>
         </p><br>
 
-    <h2>Meeting Schedule</h2>
+    <h2>This Week's Meeting Schedule</h2>
         <p>
         Monday:  7:00 PM - Video In the Hall <br><br>
 
@@ -76,11 +76,11 @@ message_html = f"""
 
         Thursday:  7:30 PM - Review of this Week's Holy Word for Morning Revival <br><br>
 
-        Friday:  7:30 PM  {friday_meeting} <br><br>
+        Friday:  7:30 PM - {friday_meeting} <br><br>
 
-        Saturday:  7:30 PM  {saturday_meeting} <br><br>
+        Saturday:  7:30 PM - {saturday_meeting} <br><br>
 
-        Lord’s Day:  10:00 AM to Noon(ish) (Lord's table followed by prophesying – please do not be passive in either meeting) <br><br>
+        Lord’s Day:  10:00 AM to Noon - Lord's table followed by prophesying (please do not be passive in either meeting) <br><br>
 
         Zoom in <a href="https://zoom.us/j/3872308362?pwd=bENhZnJ3WFpGUFo1NXArUk5lL2dBUT09">here</a><br>
         Meeting ID: 387 230 8362 <br>
@@ -115,9 +115,7 @@ Hall Cleaning (9:30 AM to 9:55 AM):
 Team {cleaning_team} - {cleaning_teams[f"Team {cleaning_team}"]}
 
 
-Meeting Schedule
-Lord’s Day:  10:00 AM to Noon(ish) - Lord's table followed by prophesying (please do not be passive in either meeting)
-
+This Week's Meeting Schedule
 Monday:  7:00 PM - Video In the Hall
 
 Tuesday:  7:30 PM - Prayer
@@ -127,6 +125,8 @@ Thursday:  7:30 PM - Review of this Week's Holy Word for Morning Revival
 Friday:  7:30 PM  {friday_meeting}
 
 Saturday:  7:30 PM  {saturday_meeting}
+
+Lord’s Day:  10:00 AM to Noon - Lord's table followed by prophesying (please do not be passive in either meeting)
 
 Zoom link: https://zoom.us/j/3872308362?pwd=bENhZnJ3WFpGUFo1NXArUk5lL2dBUT09
 Meeting ID: 387 230 8362
