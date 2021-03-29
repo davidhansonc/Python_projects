@@ -5,8 +5,10 @@ from linked_list import LinkedList
 # update weekly
 announcements = """No announcements this week"""
 
-hwmr_week = 2  # update weekly (ascending)
-HWMR = f"""We will speak on the Crystallization-Study of Job, Proverbs, Ecclesiastes, vol. 1, week {hwmr_week} + Last week's conference"""
+hwmr_week = 4  # update weekly (ascending)
+HWMR = f"""
+We will speak on the Crystallization-Study of Job, Proverbs, Ecclesiastes, vol. 1, week {hwmr_week}
+"""
 
 def get_schedule(seed):
     # create linked list
@@ -24,10 +26,10 @@ def get_schedule(seed):
         node = node.next
     return schedule
 
-group_seed = 4  # update weekly (descending)
+group_seed = 2  # update weekly (descending)
 schedule = get_schedule(group_seed)
 
-cleaning_team = 2  # update weekly (ascending)
+cleaning_team = 4  # update weekly (ascending)
 cleaning_teams = {
         "Team 1":  "Jay, Denny, David, Jessica, Pauline, Phoebe",
         "Team 2":  "Isaac, Esther H., Osvin, Tewei, Millie, Esther",
