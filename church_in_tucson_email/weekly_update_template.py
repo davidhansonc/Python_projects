@@ -3,9 +3,9 @@ from linked_list import LinkedList
 
 '''UPDATE THE FOLLOWING'''
 # update weekly
-announcements = """No announcements this week"""
+announcements = """Hi saints. Starting Lord's day April 25th, all meetings will be in person. Please plan accordingly!"""
 
-hwmr_week = 4  # update weekly (ascending)
+hwmr_week = 5  # update weekly (ascending)
 HWMR = f"""
 We will speak on the Crystallization-Study of Job, Proverbs, Ecclesiastes, vol. 1, week {hwmr_week}
 """
@@ -26,10 +26,10 @@ def get_schedule(seed):
         node = node.next
     return schedule
 
-group_seed = 2  # update weekly (descending)
+group_seed = 1  # update weekly (descending 6-1)
 schedule = get_schedule(group_seed)
 
-cleaning_team = 4  # update weekly (ascending)
+cleaning_team = 1  # update weekly (ascending 1-4)
 cleaning_teams = {
         "Team 1":  "Jay, Denny, David, Jessica, Pauline, Phoebe",
         "Team 2":  "Isaac, Esther H., Osvin, Tewei, Millie, Esther",
@@ -50,6 +50,8 @@ message_html = f"""
 <html>
   <head></head>
   <body>
+    <p> {announcements} </p><br>
+
     <h2>Next Lord's Day ({lords_day})</h2>
         <h3>Prophesying Schedule:</h3>
         <p>
@@ -102,6 +104,9 @@ message_html = f"""
 """
 
 message_text = f"""
+{announcements}
+
+
 Next Lord's Day ({lords_day})
 Prophesying Schedule:
 {HWMR}
