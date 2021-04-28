@@ -3,11 +3,11 @@ from linked_list import LinkedList
 
 '''UPDATE THE FOLLOWING'''
 # update weekly
-announcements = """Hi saints. Starting Lord's day April 25th, all meetings will be in person. Please plan accordingly!"""
+announcements = """Hi saints, starting this week we are switching from the December training Holy Word for Morning Revival to the recent Chinese speaking conference. Also, just a reminder that starting next Lord's day our table/prophesying meetings will be entirely in person at the hall with no zoom. The evening meetings will still be in the hall with the option to zoom in."""
 
-hwmr_week = 5  # update weekly (ascending)
+hwmr_week = 1  # update weekly (ascending)
 HWMR = f"""
-We will speak on the Crystallization-Study of Job, Proverbs, Ecclesiastes, vol. 1, week {hwmr_week}
+We will speak on “The Holy Word for Morning Revival - The Intrinsic and Organic Building Up of the Church as the Body of Christ”, week {hwmr_week}
 """
 
 def get_schedule(seed):
@@ -26,10 +26,10 @@ def get_schedule(seed):
         node = node.next
     return schedule
 
-group_seed = 1  # update weekly (descending 6-1)
+group_seed = 4  # update weekly (descending 6-1)
 schedule = get_schedule(group_seed)
 
-cleaning_team = 1  # update weekly (ascending 1-4)
+cleaning_team = 4  # update weekly (ascending 1-4)
 cleaning_teams = {
         "Team 1":  "Jay, Denny, David, Jessica, Pauline, Phoebe",
         "Team 2":  "Isaac, Esther H., Osvin, Tewei, Millie, Esther",

@@ -10,7 +10,7 @@ from email_list import email_list
 
 
 if __name__ == "__main__":
-    sender = "churchintucson@gmail.com"
+    sender = "office@churchintucson.org"
     receivers = list(email_list.values())
     password = input("Password: ")
 
@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
     # Create secure connection with server and send email
     context = ssl.create_default_context()
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+    with smtplib.SMTP_SSL("smtpout.secureserver.net", 465, context=context) as server:
         server.login(sender, password)
         server.sendmail(
             sender, receivers, message.as_string()
