@@ -3,9 +3,16 @@ from linked_list import LinkedList
 
 '''UPDATE THE FOLLOWING'''
 # update weekly
-announcements = """Hi saints, starting this week we are switching from the December training Holy Word for Morning Revival to the recent Chinese speaking conference. Also, just a reminder that starting next Lord's day our table/prophesying meetings will be entirely in person at the hall with no zoom. The evening meetings will still be in the hall with the option to zoom in."""
+announcements = """
+Hi saints, <br><br>
 
-hwmr_week = 1  # update weekly (ascending)
+Grace upon grace.
+"""
+
+hwmr_week = 3  # update weekly (ascending)
+group_seed = 2  # update weekly (descending 6-1)
+cleaning_team = 2  # update weekly (ascending 1-4)
+
 HWMR = f"""
 We will speak on “The Holy Word for Morning Revival - The Intrinsic and Organic Building Up of the Church as the Body of Christ”, week {hwmr_week}
 """
@@ -26,10 +33,8 @@ def get_schedule(seed):
         node = node.next
     return schedule
 
-group_seed = 4  # update weekly (descending 6-1)
 schedule = get_schedule(group_seed)
 
-cleaning_team = 4  # update weekly (ascending 1-4)
 cleaning_teams = {
         "Team 1":  "Jay, Denny, David, Jessica, Pauline, Phoebe",
         "Team 2":  "Isaac, Esther H., Osvin, Tewei, Millie, Esther",
@@ -84,7 +89,7 @@ message_html = f"""
 
         Saturday:  7:30 PM - {saturday_meeting} <br><br>
 
-        Lord’s Day:  10:00 AM to Noon - Lord's table followed by prophesying (please do not be passive in either meeting) <br><br>
+        Lord’s Day:  10:00 AM to Noon - Lord's table followed by prophesying <br><br>
 
         Zoom in <a href="https://zoom.us/j/3872308362?pwd=bENhZnJ3WFpGUFo1NXArUk5lL2dBUT09">here</a><br>
         Meeting ID: 387 230 8362 <br>
@@ -133,7 +138,7 @@ Friday:  7:30 PM  {friday_meeting}
 
 Saturday:  7:30 PM  {saturday_meeting}
 
-Lord’s Day:  10:00 AM to Noon - Lord's table followed by prophesying (please do not be passive in either meeting)
+Lord’s Day:  10:00 AM to Noon - Lord's table followed by prophesying
 
 Zoom link: https://zoom.us/j/3872308362?pwd=bENhZnJ3WFpGUFo1NXArUk5lL2dBUT09
 Meeting ID: 387 230 8362
