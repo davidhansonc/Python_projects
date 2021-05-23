@@ -6,15 +6,17 @@ from linked_list import LinkedList
 announcements = """
 Hi saints, <br><br>
 
-Grace upon grace.
+Sign-up for the semiannual training is open on the table in the hall. It will be entirely online again due to COVID. <br><br>
+
+The Memorial Day Conference is also coming up. Information about the schedule and how we will watch the messages is forthcoming. 
 """
 
-hwmr_week = 3  # update weekly (ascending)
-group_seed = 2  # update weekly (descending 6-1)
-cleaning_team = 2  # update weekly (ascending 1-4)
+hwmr_week = 5  # update weekly (ascending)
+group_seed = 6  # update weekly (descending 6-1)
+cleaning_team = 4  # update weekly (ascending 1-4)
 
 HWMR = f"""
-We will speak on “The Holy Word for Morning Revival - The Intrinsic and Organic Building Up of the Church as the Body of Christ”, week {hwmr_week}
+This week we will get into “The Holy Word for Morning Revival - The Intrinsic and Organic Building Up of the Church as the Body of Christ”, week {hwmr_week}
 """
 
 def get_schedule(seed):
@@ -109,47 +111,5 @@ message_html = f"""
 """
 
 message_text = f"""
-{announcements}
-
-
-Next Lord's Day ({lords_day})
-Prophesying Schedule:
-{HWMR}
-Day 1:  Group {schedule[0]}
-Day 2:  Group {schedule[1]}
-Day 3:  Group {schedule[2]}
-Day 4:  Group {schedule[3]}
-Day 5:  Group {schedule[4]}
-Day 6:  Group {schedule[5]}
-** see end of email for groups
-
-Hall Cleaning (9:30 AM to 9:55 AM):
-Team {cleaning_team} - {cleaning_teams[f"Team {cleaning_team}"]}
-
-
-This Week's Meeting Schedule
-Monday:  7:00 PM - Video In the Hall
-
-Tuesday:  7:30 PM - Prayer
-
-Thursday:  7:30 PM - Review of this Week's Holy Word for Morning Revival
-
-Friday:  7:30 PM  {friday_meeting}
-
-Saturday:  7:30 PM  {saturday_meeting}
-
-Lord’s Day:  10:00 AM to Noon - Lord's table followed by prophesying
-
-Zoom link: https://zoom.us/j/3872308362?pwd=bENhZnJ3WFpGUFo1NXArUk5lL2dBUT09
-Meeting ID: 387 230 8362
-Password: Kingdom
-
-
-Prophesying Groups:
-Group 1:  Jay, Randy, Pauline, Kevin
-Group 2:  David, Chien Wei, Denny, Veronica
-Group 3:  Craig, Esther H., Josiah, Tewai, Esther
-Group 4:  Isaac, Millie, Tien Min, Ava, Teresa
-Group 5:  Joel Jaime G., Samuel, Carol
-Group 6:  Sam, Jessica, Phoebe, Joe, Osvin, Jamie T.
+If you see this, please reply and ask for a direct email with the schedule and announcements.
 """

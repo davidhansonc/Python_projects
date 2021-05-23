@@ -3,11 +3,30 @@ from linked_list import LinkedList
 
 '''UPDATE THE FOLLOWING'''
 # update weekly
-announcements = """Hi saints, this week is a little different because of ITERO. Meetings on Thursday, Friday, and Saturday will be canceled so that the brothers who are enrolled can meet. We will have our Lord's table and prophesying meetings on Lord's day as normal and will speak on week 6 of the current HWMR."""
+announcements = """
+Hi saints, <br><br>
 
-hwmr_week = 6  # update weekly (ascending)
+A few announcements this week. We are resuming the option to Zoom in to the meetings to a degree. There are a few saints that cannot join in person for various reasons, including an elderly couple that will be moving here soon. The option to meet virtually isn't intended for convenience, but if a saint has a particular need, it will be available.
+<br><br>
+
+The deadline to register for the semiannual training is next Lord's day May 30th, so don't forget to sign up!
+<br><br>
+
+This week we will be in the last week of the current Holy Word for Morning Revival and next week we will get into the recent ITERO. 
+<br><br>
+
+This coming weekend is the Memorial day conference. The church here will meet according to the schedule below, but the messages are available over the weekend to all at <a href="conf.lsmwebcast.com">conf.lsmwebcast.com</a>.
+<br><br>
+
+Much grace!
+"""
+
+hwmr_week = 5  # update weekly (ascending)
+group_seed = 6  # update weekly (descending 6-1)
+cleaning_team = 4  # update weekly (ascending 1-4)
+
 HWMR = f"""
-The Crystallization-Study of Job, Proverbs, Ecclesiastes, vol. 1, week {hwmr_week}
+“The Holy Word for Morning Revival - The Intrinsic and Organic Building Up of the Church as the Body of Christ”, week {hwmr_week}
 """
 
 def get_schedule(seed):
@@ -26,19 +45,14 @@ def get_schedule(seed):
         node = node.next
     return schedule
 
-group_seed = 6  # update weekly (descending 6-1)
 schedule = get_schedule(group_seed)
 
-cleaning_team = 2  # update weekly (ascending 1-4)
 cleaning_teams = {
         "Team 1":  "Jay, Denny, David, Jessica, Pauline, Phoebe",
         "Team 2":  "Isaac, Esther H., Osvin, Tewei, Millie, Esther",
         "Team 3":  "Craig, Jaime T., Ava, Chien Wei, Josiah, Samuel",
         "Team 4":  "Sam, Joe, Tien Min, Joel, Randy, Carol, Jaime, Teresa"
     }
-
-friday_meeting = f"Life-study of Galatians"
-saturday_meeting = f"Life-study of Matthew"
 
 lords_day = datetime.date.today()
 if lords_day.weekday() == 6:
@@ -78,15 +92,25 @@ message_html = f"""
 
         Tuesday:  7:30 PM - Prayer <br><br>
 
-        Thursday:  Canceled <br><br>
+        Thursday:  7:30 PM - Review of this Week's Holy Word for Morning Revival <br><br>
 
-        Friday:  Canceled <br><br>
+        Friday:  7:00 PM - Memorial Day Conference, message 1 <br><br>
 
-        Saturday:  Canceled <br><br>
+        Saturday morning:  10:00 AM - Memorial Day Conference, message 2 (watch at home) <br><br>
 
-        Lord’s Day:  10:00 AM to Noon - Lord's table followed by prophesying (please do not be passive in either meeting) <br><br>
+        Saturday evening:  7:00 PM - Memorial Day Conference, message 3 <br><br>
 
-        Zoom in <a href="https://zoom.us/j/3872308362?pwd=bENhZnJ3WFpGUFo1NXArUk5lL2dBUT09">here</a><br>
+        Lord’s Day morning:  10:00 AM to Noon - The Lord's table followed by prophesying <br><br>
+
+        Lord’s Day evening:  7:00 PM - Memorial Day Conference, message 4 <br><br>
+
+        Monday evening, May 31st: 7:00 PM - Memorial Day Conference, message 5 <br><br>
+        
+        Monday evening, June 7th: 7:00 PM - Memorial Day Conference, message 6 <br><br>
+
+        The website for streaming the conference messages is <a href="conf.lsmwebcast.com">conf.lsmwebcast.com</a><br><br>
+
+        Zoom in to the church meetings <a href="https://zoom.us/j/3872308362?pwd=bENhZnJ3WFpGUFo1NXArUk5lL2dBUT09">here</a><br>
         Meeting ID: 387 230 8362 <br>
         Password: Kingdom
         </p><br>
@@ -104,47 +128,5 @@ message_html = f"""
 """
 
 message_text = f"""
-{announcements}
-
-
-Next Lord's Day ({lords_day})
-Prophesying Schedule:
-{HWMR}
-Day 1:  Group {schedule[0]}
-Day 2:  Group {schedule[1]}
-Day 3:  Group {schedule[2]}
-Day 4:  Group {schedule[3]}
-Day 5:  Group {schedule[4]}
-Day 6:  Group {schedule[5]}
-** see end of email for groups
-
-Hall Cleaning (9:30 AM to 9:55 AM):
-Team {cleaning_team} - {cleaning_teams[f"Team {cleaning_team}"]}
-
-
-This Week's Meeting Schedule
-Monday:  7:00 PM - Video In the Hall
-
-Tuesday:  7:30 PM - Prayer
-
-Thursday:  Canceled
-
-Friday:  Canceled
-
-Saturday:  Canceled
-
-Lord’s Day:  10:00 AM to Noon - Lord's table followed by prophesying (please do not be passive in either meeting)
-
-Zoom link: https://zoom.us/j/3872308362?pwd=bENhZnJ3WFpGUFo1NXArUk5lL2dBUT09
-Meeting ID: 387 230 8362
-Password: Kingdom
-
-
-Prophesying Groups:
-Group 1:  Jay, Randy, Pauline, Kevin
-Group 2:  David, Chien Wei, Denny, Veronica
-Group 3:  Craig, Esther H., Josiah, Tewai, Esther
-Group 4:  Isaac, Millie, Tien Min, Ava, Teresa
-Group 5:  Joel Jaime G., Samuel, Carol
-Group 6:  Sam, Jessica, Phoebe, Joe, Osvin, Jamie T.
+If you see this, please reply and ask for a direct email with the schedule and announcements.
 """

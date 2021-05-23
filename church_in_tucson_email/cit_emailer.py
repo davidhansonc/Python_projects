@@ -5,19 +5,18 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from weekly_update_template import message_html, message_text
+from conf_template import message_html, message_text
 from email_list import email_list
 
 
 if __name__ == "__main__":
     sender = "office@churchintucson.org"
-    receivers = list(email_list.values())
+    church_email_list = list(email_list.values())
     password = input("Password: ")
 
     message = MIMEMultipart("alternative")
     message["Subject"] = "Weekly Announcements"
     message["From"] = sender
-    message["To"] = ", ".join(receivers)
     # message["Bcc"] = receiver_email  # Recommended for mass emails
 
     # Turn these into plain/html MIMEText objects
@@ -33,6 +32,8 @@ if __name__ == "__main__":
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL("smtpout.secureserver.net", 465, context=context) as server:
         server.login(sender, password)
-        server.sendmail(
-            sender, receivers, message.as_string()
-        )
+        for saint in church_email_list:
+            message["To"] = saint
+            server.sendmail(
+                sender, saint, message.as_string()
+            )
